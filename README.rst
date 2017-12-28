@@ -9,16 +9,18 @@ consumed by our automated build server.
 
 It expects a very specific folder structure.
 .. code::
-.
-|--miruken
-|  |-- Documentation
-|--miruken-es5
-|  |-- miruken
-|--miruken-dotnet
-   |-- Miruken
-   |-- Miruken.Mediate
-   |-- Miruken.Mvc
-   |-- SymbolDownloader
+  .
+  |-- miruken
+  |   |-- Documentation
+  |
+  |-- miruken-es5
+  |   |-- miruken
+  |
+  |-- miruken-dotnet
+      |-- Miruken
+      |-- Miruken.Mediate
+      |-- Miruken.Mvc
+      |-- SymbolDownloader
 
 reStructuredText (reST)
 -----------------------
