@@ -8,16 +8,17 @@ This repo rolls up all the miruken documentation into a single place. It is inte
 consumed by our automated build server.
 
 It expects a very specific folder structure.
-
-miruken
- |-Documentation
-miruken-es5
- |-miruken
-miruken-dotnet
-	|-Miruken
-	|-Miruken.Mediate
-	|-Miruken.Mvc
-	|-SymbolDownloader
+.. code::
+.
+|--miruken
+|  |-- Documentation
+|--miruken-es5
+|  |-- miruken
+|--miruken-dotnet
+   |-- Miruken
+   |-- Miruken.Mediate
+   |-- Miruken.Mvc
+   |-- SymbolDownloader
 
 reStructuredText (reST)
 -----------------------
