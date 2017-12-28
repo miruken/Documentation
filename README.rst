@@ -2,8 +2,6 @@
 Miruken Documentation
 =====================
 
-  View the docs `here <http://miruken.com/documentation>`_
-
 This repo rolls up all the miruken documentation into a single place. It is intented to be 
 consumed by our automated build server.
 
@@ -21,6 +19,8 @@ It expects a very specific folder structure.
       |-- Miruken.Mediate
       |-- Miruken.Mvc
       |-- SymbolDownloader
+
+The build documentation will eventually be on the Miruken website.
 
 reStructuredText (reST)
 -----------------------
