@@ -10,6 +10,7 @@ It expects a very specific folder structure.
   .
   |-- miruken
   |   |-- Documentation
+  |   |-- miruken.github.io
   |
   |-- miruken-es5
   |   |-- miruken
@@ -20,7 +21,7 @@ It expects a very specific folder structure.
       |-- Miruken.Mvc
       |-- SymbolDownloader
 
-The build documentation will eventually be on the Miruken website.
+The built documentation is hosted on `Miruken.com <http://miurken.com/documentation/master>`_ 
 
 reStructuredText (reST)
 -----------------------
