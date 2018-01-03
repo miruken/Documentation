@@ -3,7 +3,7 @@ copyright = u'2017, Miruken'
 author = u'Craig Neuwirt, Michael Dudley'
 
 extensions = []
-source_suffix = '.rst'
+sourcesuffix = '.rst'
 master_doc = 'index'
 version = u''
 release = u''
@@ -12,6 +12,13 @@ pygments_style = 'sphinx'
 
 html_theme = "sphinx_rtd_theme"
 html_theme_path = ["_themes", ]
+html_theme_options = {
+    'display_version': True,
+    'prev_next_buttons_location': 'both',
+    # Toc options
+    'collapse_navigation': False,
+    'sticky_navigation': True
+}
 
 todo_include_todos = False
 htmlhelp_basename = 'Miruken'
