@@ -9,6 +9,8 @@ $targets = @(
     @{source="..\..\miruken-dotnet\SymbolDownloader\Doc\*"; destination=".\doc\miruken-dotnet\SymbolDownloader\Doc\";}
 )
 
+Remove-Directory ".\doc\_build\"
+
 $targets | %{ Remove-Directory $_.destination } 
 $targets | %{ Create-Directory $_.destination }
 $targets | %{ Copy-Directory $_.source $_.destination }
