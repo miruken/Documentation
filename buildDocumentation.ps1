@@ -2,6 +2,7 @@
 . "$source\infrastructure.ps1"
 
 $targets = @(
+    @{source="..\..\miruken\Specification\doc\*";           destination=".\doc\miruken\Specification\doc\";}
     @{source="..\..\miruken-es5\miruken\doc\*";             destination=".\doc\miruken-es5\";}
     @{source="..\..\miruken-dotnet\Miruken\Doc\*";          destination=".\doc\miruken-dotnet\Miruken\Doc\";}
     @{source="..\..\miruken-dotnet\Miruken.Mediate\Doc\*";  destination=".\doc\miruken-dotnet\Miruken.Mediate\Doc\";}

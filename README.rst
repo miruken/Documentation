@@ -11,6 +11,7 @@ It expects a very specific folder structure.
   |-- miruken
   |   |-- Documentation
   |   |-- miruken.github.io
+  |   |-- Specificaiton
   |
   |-- miruken-es5
   |   |-- miruken

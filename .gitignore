@@ -1,3 +1,4 @@
 _build
-miruken-dotnet
-miruken-es5
+doc/miruken-dotnet
+doc/miruken-es5
+doc/miruken
