@@ -20,4 +20,5 @@ References
 ==========
 
 * `sphinx-doc.org <http://www.sphinx-doc.org/en/stable/>`_
+* `sphinxcontrib-versioning <https://robpol86.github.io/sphinxcontrib-versioning/index.html>`_
 * `Restructured Text Documentation <http://docutils.sourceforge.net/rst.html>`_
