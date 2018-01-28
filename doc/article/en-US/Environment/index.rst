@@ -11,4 +11,5 @@ Instructions on setting up different tools in your development environment.
    python.rst
    node.rst
    sphinx.rst
+   yarn.rst
 
