@@ -6,4 +6,4 @@ Force yarn to upgrade all babel packages to the newest version.  This ignores ve
 
 .. code-block:: none
 
-    yarn upgrade -P \babel-\ --force
+    yarn upgrade -P \babel-\ --latest
