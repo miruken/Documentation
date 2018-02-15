@@ -15,5 +15,11 @@ function Create-Directory($directory)
     }
 }
 function Copy-Directory($source, $destination){
-    Copy-Item -recurse $source $destination 
+    Copy-Item -recurse -force $source $destination 
+}
+
+function Replace-Directory($source, $destination){
+    Remove-Directory $destination
+    Create-Directory $destination
+    Copy-Directory   $source $destination
 }

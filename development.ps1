@@ -1,2 +1,4 @@
-﻿. .\buildDocumentation.ps1
-. .\copyDocumentation.ps1 "develop"
+﻿$branch = "develop"
+
+. .\buildAggregateDocumentation.ps1 $branch
+. .\copyDocumentation.ps1  $branch
