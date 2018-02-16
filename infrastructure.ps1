@@ -1,4 +1,10 @@
-﻿function Remove-Directory($directory)
+﻿function MustBeInDevelopRepository(){
+    if(!$currentLocation.Path.EndsWith('Documentation', "CurrentCultureIgnoreCase")) {
+        throw "Must be run from the root of the miruken Documentation repo."
+    }
+}
+
+function Remove-Directory($directory)
 {
     $directoryExists = Test-Path($directory) 
     if($directoryExists -eq $True)

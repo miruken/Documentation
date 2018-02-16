@@ -6,9 +6,7 @@ $currentLocation = Get-Location;
 
 try {
 
-    if(!$currentLocation.Path.EndsWith('Documentation', "CurrentCultureIgnoreCase")) {
-        throw "Must be run from the root of the miruken Documentation repo."
-    }
+    MustBeInDevelopRepository
 
     $targets = @(
         @{source="..\Specification";                      docFolder=".\doc"; destination="..\miruken.github.io\documentation\versions\Specification"}

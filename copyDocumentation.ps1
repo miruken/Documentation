@@ -1,10 +1,22 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
 
-$branch      = $args[0]
-$source      = ".\doc\_build\html\*"
-$destination = "..\miruken.github.io\documentation\$branch"
+try{
+    MustBeInDevelopRepository
 
-Remove-Directory $destination
-Create-Directory $destination
-Copy-Directory   $source $destination
+    $branch      = $args[0]
+
+    if(!$branch){
+        throw "branch parameter is required"
+    }
+
+    $source      = ".\doc\_build\html\*"
+    $destination = "..\miruken.github.io\documentation\$branch"
+
+    Replace-Directory $source $destination    
+
+    return 0
+} catch {
+    return 1
+}
+
