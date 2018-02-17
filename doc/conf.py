@@ -7,7 +7,7 @@ sourcesuffix = '.rst'
 master_doc = 'index'
 version = u''
 release = u''
-exclude_patterns = []
+exclude_patterns = ['**/README.rst']
 pygments_style = 'sphinx'
 
 html_theme = "sphinx_rtd_theme"
