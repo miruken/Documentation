@@ -1,6 +1,7 @@
 ﻿$branch = "develop"
 
-. .\buildAggregateDocumentation.ps1 $branch
-. .\copyDocumentation.ps1  $branch
+MustBeInDocumentationRepository
 
+. .\buildAggregateDocumentation.ps1 $branch
+. .\copyAggregateDocumentation.ps1  $branch
 . .\buildVersionedDocumentation.ps1

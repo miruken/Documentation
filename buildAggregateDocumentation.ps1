@@ -4,7 +4,7 @@
 
 try {
 
-    MustBeInDevelopRepository
+    MustBeInDocumentationRepository
 
     $targets = @(
         @{source="..\..\miruken\Specification\doc\*";           destination=".\doc\miruken\Specification\doc\";}
@@ -29,5 +29,6 @@ try {
     
     return 0
 } catch {
+    Write-Error $_
     return 1
 }

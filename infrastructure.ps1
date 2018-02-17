@@ -1,7 +1,7 @@
-﻿function MustBeInDevelopRepository(){
-    $directory = Get-ScriptDirectory
-    if(!$directory.EndsWith('Documentation', "CurrentCultureIgnoreCase")) {
-        throw "Must be run from the root of the miruken Documentation repo."
+﻿function MustBeInDocumentationRepository(){
+    $directory = pwd
+    if(!$directory.Path.EndsWith('Documentation', "CurrentCultureIgnoreCase")) {
+        throw "Scripts must be run from the root of the miruken Documentation repo."
     } 
 }
 

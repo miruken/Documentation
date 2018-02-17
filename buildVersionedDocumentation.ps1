@@ -6,7 +6,7 @@ $currentLocation = Get-Location;
 
 try {
 
-    MustBeInDevelopRepository
+    MustBeInDocumentationRepository
 
     $targets = @(
         @{source="..\Specification";                      docFolder=".\doc"; destination="..\miruken.github.io\documentation\versions\Specification"}
@@ -35,5 +35,6 @@ try {
     }
     return 0
 } catch {
+    Write-Error $_
     return 1
 }

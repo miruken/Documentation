@@ -2,7 +2,7 @@
 . "$source\infrastructure.ps1"
 
 try{
-    MustBeInDevelopRepository
+    MustBeInDocumentationRepository
 
     $branch      = $args[0]
 
@@ -17,6 +17,7 @@ try{
 
     return 0
 } catch {
+    Write-Error $_
     return 1
 }
 
