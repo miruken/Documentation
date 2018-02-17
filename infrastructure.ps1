@@ -8,6 +8,7 @@
         Invoke-Command $Action
         [System.Environment]::Exit(0)
     }catch{
+        Write-Error $_
         Write-Host "##teamcity[buildStatus status='FAILURE']"
         [System.Environment]::Exit(1)
     }
