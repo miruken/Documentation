@@ -2,7 +2,7 @@
 . "$source\infrastructure.ps1"
 $currentLocation = Get-Location;
 
-Wrap({
+return Wrap({
     $branch = $args[0]
     
     git config --global user.email "mirukenjs@gmail.com"
