@@ -2,7 +2,7 @@
 . "$source\infrastructure.ps1"
 $currentLocation = Get-Location;
 
-return Wrap({
+Wrap({
     $targets = @(
         @{source="..\Specification";                      docFolder=".\doc"; destination="..\miruken.github.io\documentation\versions\Specification"}
         @{source="..\..\miruken-es5\miruken";             docFolder=".\doc"; destination="..\..\miruken\miruken.github.io\documentation\versions\miruken-es5\miruken";}

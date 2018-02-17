@@ -1,7 +1,7 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
 
-return Wrap({
+Wrap({
     $targets = @(
         @{source="..\..\miruken\Specification\doc\*";           destination=".\doc\miruken\Specification\doc\";}
         @{source="..\..\miruken-es5\miruken\doc\*";             destination=".\doc\miruken-es5\";}

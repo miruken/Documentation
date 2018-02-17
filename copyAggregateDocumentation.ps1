@@ -1,7 +1,7 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
 
-return Wrap({
+Wrap({
     $branch = $args[0]
 
     if(!$branch){
@@ -12,4 +12,4 @@ return Wrap({
     $destination = "..\miruken.github.io\documentation\$branch"
 
     Replace-Directory $source $destination    
-})
+}).GetNewClosure()

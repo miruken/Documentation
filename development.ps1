@@ -1,9 +1,9 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
 
-return Wrap({
+Wrap({
     $branch = "develop"
-    . .\buildAggregateDocumentation.ps1 $branch
+    #. .\buildAggregateDocumentation.ps1 $branch
     . .\copyAggregateDocumentation.ps1  $branch
-    . .\buildVersionedDocumentation.ps1
+    #. .\buildVersionedDocumentation.ps1
 })
