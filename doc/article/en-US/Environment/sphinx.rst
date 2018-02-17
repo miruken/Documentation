@@ -13,8 +13,8 @@ and Sphinx 1.6.5
 
 .. code-block:: none
 
-	pip install sphinx=1.5.6
-	pip install sphinxcontrib-versioning=2.2.1
+	pip install sphinx==1.5.6
+	pip install sphinxcontrib-versioning==2.2.1
 
 References
 ==========
