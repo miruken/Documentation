@@ -1,8 +1,9 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
 
+$branch = $args[0]
+
 Wrap({
-    $branch = $args[0]
 
     if(!$branch){
         throw "branch parameter is required"
