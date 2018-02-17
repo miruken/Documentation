@@ -1,4 +1,19 @@
-﻿function MustBeInDocumentationRepository(){
+﻿function Wrap {
+    param (
+            [Parameter(Mandatory)]
+            [Scriptblock] $Action
+    )
+    try{
+        MustBeInDocumentationRepository
+        Invoke-Command $Action
+        return 0
+    }catch{
+        Write-Error $_
+        return 1
+    }
+}
+
+function MustBeInDocumentationRepository(){
     $directory = pwd
     if(!$directory.Path.EndsWith('Documentation', "CurrentCultureIgnoreCase")) {
         throw "Scripts must be run from the root of the miruken Documentation repo."

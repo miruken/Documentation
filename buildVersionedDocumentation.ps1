@@ -1,13 +1,8 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
-
-$branch          = if($args[0] -eq $null) {"develop"} else {$args[0]};
 $currentLocation = Get-Location;
 
-try {
-
-    MustBeInDocumentationRepository
-
+Wrap({
     $targets = @(
         @{source="..\Specification";                      docFolder=".\doc"; destination="..\miruken.github.io\documentation\versions\Specification"}
         @{source="..\..\miruken-es5\miruken";             docFolder=".\doc"; destination="..\..\miruken\miruken.github.io\documentation\versions\miruken-es5\miruken";}
@@ -33,8 +28,4 @@ try {
 
         cd $currentLocation
     }
-    return 0
-} catch {
-    Write-Error $_
-    return 1
-}
+})

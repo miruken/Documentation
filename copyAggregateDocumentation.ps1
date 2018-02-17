@@ -1,10 +1,8 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
 
-try{
-    MustBeInDocumentationRepository
-
-    $branch      = $args[0]
+Wrap({
+    $branch = $args[0]
 
     if(!$branch){
         throw "branch parameter is required"
@@ -14,10 +12,4 @@ try{
     $destination = "..\miruken.github.io\documentation\$branch"
 
     Replace-Directory $source $destination    
-
-    return 0
-} catch {
-    Write-Error $_
-    return 1
-}
-
+})

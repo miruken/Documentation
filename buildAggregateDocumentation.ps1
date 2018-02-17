@@ -1,11 +1,7 @@
 ﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
 . "$source\infrastructure.ps1"
 
-
-try {
-
-    MustBeInDocumentationRepository
-
+Wrap({
     $targets = @(
         @{source="..\..\miruken\Specification\doc\*";           destination=".\doc\miruken\Specification\doc\";}
         @{source="..\..\miruken-es5\miruken\doc\*";             destination=".\doc\miruken-es5\";}
@@ -26,9 +22,4 @@ try {
     cd .\doc
     ./make.bat html
     cd ..
-    
-    return 0
-} catch {
-    Write-Error $_
-    return 1
-}
+})

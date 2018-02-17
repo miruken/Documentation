@@ -1,7 +1,8 @@
-﻿try{
+﻿$source = Split-Path -Parent $MyInvocation.MyCommand.Path
+. "$source\infrastructure.ps1"
+$currentLocation = Get-Location;
 
-    MustBeInDocumentationRepository
-
+Wrap({
     $branch = $args[0]
     
     git config --global user.email "mirukenjs@gmail.com"
@@ -10,11 +11,6 @@
     git add .
     git commit -m "CI Documentation Build"
     git push origin master
-    cd .\
-
-    return 0
-} catch {
-    Write-Error $_
-    return 1
-}
+    cd $currentLocation
+})
 
