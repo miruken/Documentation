@@ -1,7 +1,8 @@
 ﻿function MustBeInDevelopRepository(){
-    if(!$currentLocation.Path.EndsWith('Documentation', "CurrentCultureIgnoreCase")) {
+    $directory = Get-ScriptDirectory
+    if(!$directory.EndsWith('Documentation', "CurrentCultureIgnoreCase")) {
         throw "Must be run from the root of the miruken Documentation repo."
-    }
+    } 
 }
 
 function Remove-Directory($directory)
@@ -29,3 +30,20 @@ function Replace-Directory($source, $destination){
     Create-Directory $destination
     Copy-Directory   $source $destination
 }
+
+function Get-ScriptDirectory
+{
+    $Invocation = (Get-Variable MyInvocation -Scope 1).Value;
+    if($Invocation.PSScriptRoot)
+    {
+        $Invocation.PSScriptRoot;
+    }
+    Elseif($Invocation.MyCommand.Path)
+    {
+        Split-Path $Invocation.MyCommand.Path
+    }
+    else
+    {
+        $Invocation.InvocationName.Substring(0,$Invocation.InvocationName.LastIndexOf("\"));
+    }
+} 
