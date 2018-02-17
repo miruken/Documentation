@@ -6,10 +6,10 @@
     try{
         MustBeInDocumentationRepository
         Invoke-Command $Action
-        return 0
+        [System.Environment]::Exit(0)
     }catch{
-        Write-Error $_
-        return 1
+        Write-Host "##teamcity[buildStatus status='FAILURE']"
+        [System.Environment]::Exit(1)
     }
 }
 
