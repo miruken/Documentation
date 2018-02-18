@@ -1,16 +1,14 @@
 ﻿function Wrap {
     param (
-            [Parameter(Mandatory)]
-            [Scriptblock] $Action
+        [Parameter(Mandatory)]
+        [Scriptblock] $Action
     )
     try{
         MustBeInDocumentationRepository
         Invoke-Command $Action
-        [System.Environment]::Exit(0)
     }catch{
         Write-Error $_
-        Write-Host "##teamcity[buildStatus status='FAILURE']"
-        [System.Environment]::Exit(1)
+        Write-Host "##teamcity[buildStatus status='FAILURE' text='Failed powershell task']"
     }
 }
 
