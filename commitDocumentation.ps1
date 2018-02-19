@@ -8,7 +8,15 @@ Wrap({
     cd ..\miruken.github.io
     git add .
     git commit -m "CI Documentation Build"
-    git push origin master
+
+    $responses = git push origin master --porcelain
+    forEach($response in $responses)
+    {
+        if($response -like "*rejected*"){
+            throw "git push was rejected"
+        }
+    }
+
     cd $currentLocation
 })
 
