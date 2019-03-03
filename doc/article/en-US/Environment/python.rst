@@ -25,3 +25,14 @@ You should see something like
     >>>
 
 Type :code:`ctrl-c` to exit.
+
+
+Update pip
+====================
+
+:code:`pip` is pythons package manager.  We use it to install sphinx.  It will probably need updating to the latest version.  You will know you need to update if you get ssl errors :code:`[SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:590) - skipping`
+
+
+.. code-block:: none
+
+    curl https://bootstrap.pypa.io/get-pip.py | python
